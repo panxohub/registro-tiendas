@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Nuevo Local</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+    <div class="contenedor-formulario">
+        <div class="tarjeta">
+            <nav>
+                <a href="">contacto</a>
+                <a href="https://media.istockphoto.com/id/1829736095/es/vector/conjunto-de-iconos-log%C3%ADsticos-colecci%C3%B3n-de-iconos-s%C3%B3lidos-ilustraci%C3%B3n-vectorial.jpg?s=612x612&w=0&k=20&c=xLipad5G5wlP96jHu-Unb7PFAkEaa3T1J81fLql_4H0=">Servicios </a> |
+
+            </nav>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ1phwiSlgMtQ9DIOq_DL8_6CGJQD-mHKzQg&s" alt="logo">
+
+            <h2>Datos del Establecimiento</h2>
+
+            <p class="subtitulo">Completa la información para registrar el local.</p>
+
+            <form id="formRegistro">
+                <div class="nombre">
+                    <label for="nombre">Nombre del Local:</label>
+                    <input type="text" id="nombre" placeholder="Ej: Café Central" required>
+                </div>
+                <br />
+
+                <div>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="ejemplo@correo.com" required>
+                </div>
+                <br />
+
+
+
+                <div class="categoria">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria">
+                        <option value="comida">Comida rapida</option>
+                        <option value="comercio">Negocio de barrio</option>
+                        <option value="salud">Farmacias</option>
+                        <option value="Entretenimiento">Juegos </option>
+                        <option value="otro">Otro rubro </option>
+
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="descripcion">Si selecciona "otro rubro" por favor rellene este campo</label>
+                    <textarea id="descripcion" rows="3"></textarea>
+                </div>
+                <br />
+
+                <div class="ubicacion">
+                    <label for="direccion"> Ubicacion del local:</label>
+                    <input type="text" id="direccion" placeholder="Ej: los estudiantes 134" required />
+                </div>
+                <br />
+                <div class="Region">
+
+                    <label for="region">Seleccione su region:</label>
+
+                    <select id="Regiones">
+                        <option value="region1">La araucania</option>
+                        <option value="region2">Los lagos</option>
+                        <option value="region3">Los bio-bio</option>
+                    </select>
+                    <label for="regiones">Solo regiones inscritas</label>
+                </div>
+                <br />
+                <div class=" ciudad">
+                    <label for="ciudad">Seleccione su ciudad</label>
+                    <select id="ciudades">
+                        <option value="ciudad">Temuco</option>
+                        <option value="ciudad">Lautaro</option>
+                        <option value="ciudad">Puerto montt</option>
+                        <option value="ciudad">Concepcion</option>
+                    </select>
+                </div>
+
+                <br />
+
+                <div class="campo">
+                    <label for="descripcion">Resuma su giro comercial</label>
+                    <textarea id="descripcion" rows="3"></textarea>
+                </div>
+                <br />
+                <div class="campo">
+                    <label for="descripcion">Resuma que espera de nuestra app (No es obligatorio) </label>
+                    <textarea id="espera" rows="4"></textarea>
+
+
+
+
+                </div>
+
+                <div class="seleccionador">
+                    <label for="foto">Imagen o Logo:</label>
+                    <input type="file" id="foto" accept="image/*">
+                    <small>Solo se permiten archivos de imagen (JPG, PNG).</small>
+                </div>
+                <footer>
+                    <p>&copy; 2026 - Todos los derechos reservados por panxo-ya</p>
+                </footer>
+
+                <button type="button" class="btn-guardar" onclick="validar()">Registrar Local</button>
+            </form>
+        </div>
+    </div>
+   
+
+    <script>
+        function validar() {
+            const nombre = document.getElementById('nombre').value;
+            const direccion = document.getElementById('direccion').value;
+            const descripcion = document.getElementById('descripcion').value;
+
+            if(nombre.trim() === "" || direccion.trim() === "" || descripcion.trim()==="" ){
+
+    alert("Todos los campos son obligatorios");
+            } else {
+                alert("¡Excelente! El local '" + nombre + "' se ha incrito correctamente");
+                alert("Por favor espere instrucciones de nuestro equipo de soporte")
+                document.getElementById('formRegistro').reset();
+
+            }
+        }
+
+    </script>
+
+
+
+</body>
+</html>

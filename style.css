@@ -1,0 +1,113 @@
+/* Reset general para que se vea igual en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #44DC74;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.p {
+    color: #097FF5;
+}
+
+.contenedor-formulario {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    color: #AE42D6;
+}
+
+.tarjeta {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin: 0 0 10px 0;
+    color: #E7113B;
+    font-family:'Cambria Math','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.campo {
+    color: #7EF266;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #A2EE3A;
+}
+
+/* Estilo para los inputs, select y textarea */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #B80858; 
+    }
+
+/* Estilo para el input de tipo archivo */
+input[type="file"] {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #eee;
+    width: 100%;
+    cursor: pointer;
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+    color: #95a5a6;
+    font-size: 0.8rem;
+}
+
+/* Estilo del botón */
+.btn-guardar {
+    width: 100%;
+    padding: 14px;
+    background-color: #3498db; /* Color azul */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .btn-guardar:hover {
+        background-color: #B80858; /* Azul más oscuro al pasar el mouse */
+    }
+
+
+
